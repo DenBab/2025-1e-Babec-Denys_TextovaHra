@@ -12,37 +12,11 @@ Scanner sc = new Scanner (System.in);
  String volba1 = sc.nextLine();
 
 
+     mecNeboKlacek(volba1);
 
-if(volba1.equals("mec") || volba1.equals("meč") || volba1.equals("Meč") || volba1.equals("Mec")){//kdyz vybere mec
- System.out.println();
- System.out.println("Vyborna volba!");
- System.out.println();
- System.out.println("Mozna prezijes....");
- System.out.println();
+     String jmeno = getJmeno(sc);
 
-    }else if(volba1.equals("klacek") || volba1.equals("Klacek")){         // kdyz vybere klacek
- System.out.println();
-      System.out.println("Ok....");
-      System.out.println("Vis co? Budes mit mec :D"); 
-      System.out.println();
-
-    }else {
-    System.out.println();
-    System.out.println("Nechapu co tim myslis, takze dostanes mec."); 
-    System.out.println();
-    volba1 = "mec";
-    }
-
-    System.out.println();
-    System.out.println("Mimochodem, jak se vlastne jmenujes?");
-    System.out.println();
-    System.out.println("Napis to s velkym pismenem");
-    System.out.println();
-    String jmeno = sc.nextLine();
-    System.out.println();
-    System.out.println("Hmm " + jmeno + " zajimavy.....");
-    System.out.println();
-    System.out.println("ok " + jmeno + " jdes ven ze sve vesnice a musis si vybrat cestu mezi lesem a barem");
+     System.out.println("ok " + jmeno + " jdes ven ze sve vesnice a musis si vybrat cestu mezi lesem a barem");
     System.out.println();
     System.out.println("Kam to bude ?");
     System.out.println();
@@ -203,6 +177,41 @@ if(volba1.equals("mec") || volba1.equals("meč") || volba1.equals("Meč") || vol
           }    
     }
   }
+
+    private static String getJmeno(Scanner sc) {
+        System.out.println();
+        System.out.println("Mimochodem, jak se vlastne jmenujes?");
+        System.out.println();
+        System.out.println("Napis to s velkym pismenem");
+        System.out.println();
+        String jmeno = sc.nextLine();
+        System.out.println();
+        System.out.println("Hmm " + jmeno + " zajimavy.....");
+        System.out.println();
+        return jmeno;
+    }
+
+    private static void mecNeboKlacek(String volba1) {
+        if(volba1.equals("mec") || volba1.equals("meč") || volba1.equals("Meč") || volba1.equals("Mec")){//kdyz vybere mec
+         System.out.println();
+         System.out.println("Vyborna volba!");
+         System.out.println();
+         System.out.println("Mozna prezijes....");
+         System.out.println();
+
+            }else if(volba1.equals("klacek") || volba1.equals("Klacek")){         // kdyz vybere klacek
+         System.out.println();
+              System.out.println("Ok....");
+              System.out.println("Vis co? Budes mit mec :D");
+              System.out.println();
+
+            }else {
+            System.out.println();
+            System.out.println("Nechapu co tim myslis, takze dostanes mec.");
+            System.out.println();
+            volba1 = "mec";
+            }
+    }
 
     private static void uvod() {
         System.out.println();
